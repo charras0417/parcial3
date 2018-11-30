@@ -58,6 +58,6 @@ public class exercises {
         this.maxpt = maxpt;
     }
     
-    
+    como va eso =?
     
 }
