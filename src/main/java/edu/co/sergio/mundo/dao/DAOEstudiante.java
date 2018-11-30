@@ -27,7 +27,7 @@ public class DAOEstudiante implements IBaseDatos<Estudiante>{
   
     public List<Estudiante> findAllByEscuela(int codEscuela) {
         List<Estudiante> estudiantes = null;
-        String query = "select Estudiante.codigo, estudiante.nombre from Estudiante,Escuela where Estudiante.codEscuela=Escuela.codigo;";
+        String query = "select students.firsts as students FROM students JOIN results on(results.sid=students.sid) JOIN exercises ON (exercises.cat=results.cat) group by students.firsts;";
         Connection connection = null;
         try {
             connection = Conexion.getConnection();
@@ -40,7 +40,7 @@ public class DAOEstudiante implements IBaseDatos<Estudiante>{
 	     
             ResultSet rs = preparedStmt.executeQuery();
             int id = 0;
-            String nombre = null, escuela = null;
+            String nombre = null;
 
             while (rs.next()) {
                 if (estudiantes == null) {
@@ -48,20 +48,15 @@ public class DAOEstudiante implements IBaseDatos<Estudiante>{
                 }
 
                 Estudiante estudiante = new Estudiante();
-                id = rs.getInt("codigo");
-                estudiante.setCodigo(id);
-
-                nombre = rs.getString("nombre");
-                estudiante.setNombre(nombre);
-                
-                estudiante.setEscuela("osfsd");
+                id = rs.getInt("nombre");
+                estudiante.setFirst(id);
                 
                 estudiantes.add(estudiante);
             }
             preparedStmt.close();
 
         } catch (SQLException e) {
-            System.out.println("Problemas al obtener la lista de Departamentos");
+            System.out.println("Problemas al obtener la lista de estudiantes");
             e.printStackTrace();
         }
 
