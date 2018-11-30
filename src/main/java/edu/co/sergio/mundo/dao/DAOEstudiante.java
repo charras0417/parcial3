@@ -23,7 +23,6 @@ import java.util.logging.Logger;
  * @author fabian.giraldo
  */
 public class DAOEstudiante implements IBaseDatos<Estudiante>{
-
   
     public List<Estudiante> findAllByEscuela(int codEscuela) {
         List<Estudiante> estudiantes = null;
