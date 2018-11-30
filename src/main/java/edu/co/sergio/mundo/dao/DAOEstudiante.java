@@ -40,6 +40,7 @@ public class DAOEstudiante implements IBaseDatos<Estudiante>{
 	     
             ResultSet rs = preparedStmt.executeQuery();
             int id = 0;
+     
             String nombre = null;
 
             while (rs.next()) {
