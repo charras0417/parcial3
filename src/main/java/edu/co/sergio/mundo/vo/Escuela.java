@@ -9,21 +9,21 @@ package edu.co.sergio.mundo.vo;
  *
  * @author fabian.giraldo
  */
-public class Results {
+public class Escuela {
 
     private int sid;
     private char cat;
     private int eno;
     private int points;
 
-    public Results(int sid, char cat, int eno, int points) {
+    public Escuela(int sid, char cat, int eno, int points) {
         this.sid = sid;
         this.cat = cat;
         this.eno = eno;
         this.points = points;
     }
 
-    public Results() {
+    public Escuela() {
     }
 
     public int getSid() {
