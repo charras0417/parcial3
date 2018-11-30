@@ -18,7 +18,8 @@ import java.util.logging.Logger;
  * @author fabian.giraldo
  */
 public class DAOEscuela implements IBaseDatos<Escuela>  {
-
+    
+    
     @Override
     public List<Escuela> findAll() {
         List<Escuela> Escuelas = null;
