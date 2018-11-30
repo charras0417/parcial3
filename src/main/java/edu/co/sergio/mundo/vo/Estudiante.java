@@ -10,35 +10,52 @@ package edu.co.sergio.mundo.vo;
  * @author fabian.giraldo
  */
 public class Estudiante {
-    private int codigo;
-    private String nombre;
-    private String escuela;
-    
+    private int sid;
+    private String first;
+    private String last;
+    private String email;
 
-    public int getCodigo() {
-        return codigo;
+    public Estudiante(int sid, String first, String last, String email) {
+        this.sid = sid;
+        this.first = first;
+        this.last = last;
+        this.email = email;
     }
 
-    public void setCodigo(int codigo) {
-        this.codigo = codigo;
+    public Estudiante() {
     }
 
-    public String getNombre() {
-        return nombre;
+    public int getSid() {
+        return sid;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setSid(int sid) {
+        this.sid = sid;
     }
 
-    public String getEscuela() {
-        return escuela;
+    public String getFirst() {
+        return first;
     }
 
-    public void setEscuela(String escuela) {
-        this.escuela = escuela;
+    public void setFirst(String first) {
+        this.first = first;
     }
-    
+
+    public String getLast() {
+        return last;
+    }
+
+    public void setLast(String last) {
+        this.last = last;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
     
     
 }
